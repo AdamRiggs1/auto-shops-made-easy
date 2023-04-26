@@ -1,5 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Profile } from "../profile/Profile"
+import { UserProfileEdit } from "../profile/UserProfileEdit"
 
 export const UserViews = () => {
 	return (
@@ -14,6 +15,8 @@ export const UserViews = () => {
                 </>
             }>
                 <Route path="profile" element={ <Profile /> } />
+
+                <Route path="profile/UserProfileEdit" element={ <UserProfileEdit />} />
 
             </Route>
         </Routes>
