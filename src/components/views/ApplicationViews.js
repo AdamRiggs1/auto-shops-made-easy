@@ -1,19 +1,17 @@
-import { Outlet, Route, Routes } from "react-router-dom"
+import { StoreViews } from "./StoreViews.js"
+import { UserViews } from "./UserViews.js"
 
 export const ApplicationViews = () => {
-	return (
-        <Routes>
-            <Route path="/" element={
-                <>
-                    <h1>Auto Shops Made Easy</h1>
-                    <div>Auto Shopping for Non-Car-Experts
-                    </div>
 
-                    <Outlet />
-                </>
-            }>
+    const localAutoUser = localStorage.getItem("auto_user")
+    const autoUserObject = JSON.parse(localAutoUser)
 
-            </Route>
-        </Routes>
-    )
+    if (autoUserObject.staff) {
+        //return employee views
+        return <StoreViews />
+    }
+    else {
+        //return customer views
+        return <UserViews />
+    }
 }
