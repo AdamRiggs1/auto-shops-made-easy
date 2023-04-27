@@ -4,6 +4,7 @@ import { ProfileEdit } from "../profile/ProfileEdit"
 import { AddVehicleForm } from "../vehicles/AddVehicleForm"
 import { VehicleList } from "../vehicles/VehicleList"
 import { AddStoreForm } from "../stores/AddStoreForm"
+import { OwnerStoreList } from "../stores/OwnerStoreList"
 
 export const StoreViews = () => {
 	return (
@@ -26,6 +27,8 @@ export const StoreViews = () => {
                 <Route path="vehicles/VehicleList" element={ <VehicleList />} />
 
                 <Route path="stores/AddStoreForm" element={ <AddStoreForm />} />
+
+                <Route path="stores/OwnerStoreList" element={ <OwnerStoreList />} />
 
 
             </Route>
