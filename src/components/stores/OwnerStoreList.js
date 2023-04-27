@@ -2,6 +2,7 @@ import { useEffect, useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
 
+
 export const OwnerStoreList = () => {
     const [stores, setStores] = useState([])
 
@@ -42,15 +43,14 @@ export const OwnerStoreList = () => {
     {
         stores.map(store => 
             <>
-            <Link className="store_info_link" to={""}>{store.name}</Link>
+        <Link className="store_info_link" to={""}>{store.name}</Link>
             {store.address}
             <button onClick={() => {
                 fetch(`http://localhost:8088/stores/${store.id}`, {
                     method: "DELETE"
                 })
                 .then(()=>{getAllStores()})
-            }}>Delete</button>
-
+            }}>Delete</button> 
             </>
         )
         

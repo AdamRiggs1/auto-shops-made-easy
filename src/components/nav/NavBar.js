@@ -9,6 +9,9 @@ export const NavBar = () => {
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/profile">Profile</Link>
             </li>
+            <li className="navbar__item active">
+                <Link className="navbar__link" to="/stores/StoreList">List of Stores</Link>
+            </li>
             {
                 localStorage.getItem("auto_user")
                     ? <li className="navbar__item navbar__logout">
