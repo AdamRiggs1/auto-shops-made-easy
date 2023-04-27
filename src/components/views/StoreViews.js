@@ -5,6 +5,7 @@ import { AddVehicleForm } from "../vehicles/AddVehicleForm"
 import { VehicleList } from "../vehicles/VehicleList"
 import { AddStoreForm } from "../stores/AddStoreForm"
 import { OwnerStoreList } from "../stores/OwnerStoreList"
+import { StoreList } from "../stores/StoreList"
 
 export const StoreViews = () => {
 	return (
@@ -29,6 +30,8 @@ export const StoreViews = () => {
                 <Route path="stores/AddStoreForm" element={ <AddStoreForm />} />
 
                 <Route path="stores/OwnerStoreList" element={ <OwnerStoreList />} />
+
+                <Route path="stores/StoreList" element={ <StoreList />} />
 
 
             </Route>
