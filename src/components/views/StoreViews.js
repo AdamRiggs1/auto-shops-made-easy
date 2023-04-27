@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
+import { Profile } from "../profile/Profile"
 
 export const StoreViews = () => {
 	return (
@@ -12,6 +13,7 @@ export const StoreViews = () => {
                     <Outlet />
                 </>
             }>
+                <Route path="profile" element={ <Profile /> } />
 
             </Route>
         </Routes>
