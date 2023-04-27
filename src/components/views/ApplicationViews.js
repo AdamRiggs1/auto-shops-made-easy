@@ -6,7 +6,7 @@ export const ApplicationViews = () => {
     const localAutoUser = localStorage.getItem("auto_user")
     const autoUserObject = JSON.parse(localAutoUser)
 
-    if (autoUserObject.staff) {
+    if (autoUserObject.storeOwner) {
         //return employee views
         return <StoreViews />
     }

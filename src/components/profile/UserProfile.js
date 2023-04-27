@@ -33,7 +33,7 @@ export const UserProfile = () => {
     </section>
 
             <section>
-                <button onClick={() => navigate("/profile/UserProfileEdit")}>Edit Profile</button>
+                <button onClick={() => navigate("/profile/ProfileEdit")}>Edit Profile</button>
                 <button onClick={() => navigate("/vehicles/AddVehicleForm")}>Add Vehicle</button>
                 <button onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
                 <button onClick={() => navigate("")}>Reviews</button>
