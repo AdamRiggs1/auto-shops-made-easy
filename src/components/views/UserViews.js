@@ -1,6 +1,6 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Profile } from "../profile/Profile"
-import { UserProfileEdit } from "../profile/UserProfileEdit"
+import { ProfileEdit } from "../profile/ProfileEdit"
 import { AddVehicleForm } from "../vehicles/AddVehicleForm"
 import { VehicleList } from "../vehicles/VehicleList"
 
@@ -18,7 +18,7 @@ export const UserViews = () => {
             }>
                 <Route path="profile" element={ <Profile /> } />
 
-                <Route path="profile/UserProfileEdit" element={ <UserProfileEdit />} />
+                <Route path="profile/ProfileEdit" element={ <ProfileEdit />} />
 
                 <Route path="vehicles/AddVehicleForm" element={ <AddVehicleForm />} />
 

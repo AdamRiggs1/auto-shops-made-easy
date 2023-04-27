@@ -12,7 +12,7 @@ export const VehicleList = () => {
     
     useEffect(
         ()=> {
-        fetch (`http://localhost:8088/vehicles?_expand=vehicleType`)
+        fetch (`http://localhost:8088/vehicles?_expand=vehicleType&userId=${autoUserObject.id}`)
         .then(response => response.json())
         .then(
             (vehicleArray)=> {
@@ -23,28 +23,20 @@ export const VehicleList = () => {
     []
     )
 
+    //this variable will get the info from API and go to the jsx in the function
+
     const getAllVehicles = () => {
-            fetch (`http://localhost:8088/vehicles?_expand=vehicleType`)
+            fetch (`http://localhost:8088/vehicles?_expand=vehicleType&userId=${autoUserObject.id}`)
             .then(response => response.json())
             .then(
                 (vehicleArray)=> {
                     setVehicles(vehicleArray)
                 }
             )
-        }     
+        }    
     
-
-    //add a delete button to delete any needed vehicles
-    /*const deleteButton = () => {
-         
-            return fetch(`http://localhost:8088/vehicles`,{
-                    method: "DELETE"
-                })
-                .then(()=>{getAllVehicles()})
-        }*/
-        
-        
-        
+        //jsx should use a .map to iterate through the vehciles array to display all of the information for all the cars
+        //there should be a delete button next to each car
 
     return <article className="vehicles">
     {

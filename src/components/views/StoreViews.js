@@ -1,5 +1,9 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { Profile } from "../profile/Profile"
+import { ProfileEdit } from "../profile/ProfileEdit"
+import { AddVehicleForm } from "../vehicles/AddVehicleForm"
+import { VehicleList } from "../vehicles/VehicleList"
+import { AddStoreForm } from "../stores/AddStoreForm"
 
 export const StoreViews = () => {
 	return (
@@ -14,6 +18,15 @@ export const StoreViews = () => {
                 </>
             }>
                 <Route path="profile" element={ <Profile /> } />
+
+                <Route path="profile/ProfileEdit" element={ <ProfileEdit />} />
+
+                <Route path="vehicles/AddVehicleForm" element={ <AddVehicleForm />} />
+
+                <Route path="vehicles/VehicleList" element={ <VehicleList />} />
+
+                <Route path="stores/AddStoreForm" element={ <AddStoreForm />} />
+
 
             </Route>
         </Routes>

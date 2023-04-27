@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 
 
-export const UserProfileEdit = () => {
+export const ProfileEdit = () => {
     /*
     TODO: Add the correct default properties to the
     initial state object
