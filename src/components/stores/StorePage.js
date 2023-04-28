@@ -39,15 +39,18 @@ export const StorePage = () => {
         
     }
     {
+        stores.map(store =>
         autoUserObject.storeOwner
         ?<>
-        <button onClick={() => navigate("")}>Edit Store Information</button>
+        <button onClick={() => navigate(`/stores/StoreEdit/${store.id}`)}>Edit Store Information</button>
         </>
         :<>
         </>
+        )
     }
     <section>
     <button onClick={() => navigate("/stores/StoreList")}>View Stores</button>
+    <button onClick={() => navigate("")}>Leave a Review</button>
     </section>
     </article>
 }
