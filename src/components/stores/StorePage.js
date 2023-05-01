@@ -48,9 +48,14 @@ export const StorePage = () => {
         </>
         )
     }
+   
+   {
+    stores.map(store=> 
     <section>
     <button onClick={() => navigate("/stores/StoreList")}>View Stores</button>
-    <button onClick={() => navigate("")}>Leave a Review</button>
+    <button onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button>
     </section>
+    )
+    }
     </article>
 }

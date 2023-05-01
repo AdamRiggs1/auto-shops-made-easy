@@ -49,7 +49,7 @@ export const StoreEdit = () => {
             .then(response => response.json())
             .then(
                 () => {
-                    navigate(`/stores/StoreList/${storeId}`)
+                    navigate(`/stores/StorePage/${storeId}`)
                 }
             )
     }
@@ -122,7 +122,7 @@ export const StoreEdit = () => {
                 className="btn btn-primary">
                 Submit Changes
             </button>
-            <button onClick={()=> {navigate(`/stores/StoreList/${storeId}`)}}>Cancel Edit</button>
+            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
         </form>
     </>
     )

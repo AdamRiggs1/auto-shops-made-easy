@@ -30,6 +30,7 @@ export const UserProfile = () => {
         <section>
         <h2>User Profile</h2>
         <div>{profile.name}</div>
+        <img src={profile.img} alt="shrek" />
     </section>
 
             <section>
