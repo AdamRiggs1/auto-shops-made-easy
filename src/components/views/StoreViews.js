@@ -35,7 +35,7 @@ export const StoreViews = () => {
 
                 <Route path="stores/StoreList" element={ <StoreList />} />
 
-                <Route path="stores/StoreList/:storeId" element={ <StorePage />} />
+                <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
 
                 <Route path ="stores/StoreEdit/:storeId" element={ <StoreEdit />} />
 
