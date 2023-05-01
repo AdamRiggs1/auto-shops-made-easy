@@ -3,16 +3,16 @@ import { useParams } from 'react-router-dom'
 
 
 
-export const Reviews = ({store}) => {
+export const Reviews = () => {
     const [reviews, setReviews] = useState([])
 
-    const storeId = useParams()
+    const { storeId } = useParams()
 
     
     
     useEffect(
         ()=> {
-        fetch (`http://localhost:8088/reviews?storeId=1&_expand=vehicle&_expand=user`)
+        fetch (`http://localhost:8088/reviews?storeId=${storeId}&_expand=vehicle&_expand=user`)
         .then(response => response.json())
         .then(
             (reviewArray)=> {
