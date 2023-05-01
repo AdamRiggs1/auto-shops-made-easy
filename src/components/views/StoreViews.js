@@ -9,7 +9,7 @@ import { StoreList } from "../stores/StoreList"
 import { StorePage } from "../stores/StorePage"
 import { StoreEdit } from "../stores/StoreEdit"
 import { StoreReviews } from "../stores/StoreReviews"
-import { Reviews } from "../reviews/Reviews"
+import { ReviewEdit } from "../reviews/ReviewEdit"
 
 export const StoreViews = () => {
 	return (
@@ -43,7 +43,9 @@ export const StoreViews = () => {
 
                 <Route path="stores/StoreReviews/:storeId" element={ <StoreReviews /> } />
 
-                <Route path="reviews/:storeId" element={ <Reviews /> } />
+                <Route path="reviews/:storeId/:reviewId" element={ <ReviewEdit /> } />
+
+            
 
 
             </Route>

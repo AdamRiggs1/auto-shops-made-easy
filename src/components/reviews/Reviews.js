@@ -1,5 +1,5 @@
 import { useEffect, useState} from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 
 
@@ -7,6 +7,11 @@ export const Reviews = () => {
     const [reviews, setReviews] = useState([])
 
     const { storeId } = useParams()
+    const { reviewId } =useParams()
+    const navigate = useNavigate()
+
+    const localAutoUser = localStorage.getItem("auto_user")
+    const autoUserObject = JSON.parse(localAutoUser)
 
     
     
@@ -35,7 +40,17 @@ export const Reviews = () => {
                 {review.rating}<br></br>
                 {review.text}<br></br>
                 {review.date}<br></br>
+                
+                {
+                autoUserObject.storeOwner === false
+               ? <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
+               :<></>
+                }   
+                
                 </>
+                
+                
+                
             )
     }
     </article>
