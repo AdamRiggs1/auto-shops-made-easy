@@ -8,6 +8,7 @@ import { OwnerStoreList } from "../stores/OwnerStoreList"
 import { StoreList } from "../stores/StoreList"
 import { StorePage } from "../stores/StorePage"
 import { StoreEdit } from "../stores/StoreEdit"
+import { StoreReviews } from "../stores/StoreReviews"
 
 export const StoreViews = () => {
 	return (
@@ -38,6 +39,8 @@ export const StoreViews = () => {
                 <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
 
                 <Route path ="stores/StoreEdit/:storeId" element={ <StoreEdit />} />
+
+                <Route path="stores/StoreReviews/:storeId" element={ <StoreReviews /> } />
 
 
             </Route>

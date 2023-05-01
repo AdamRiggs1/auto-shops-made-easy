@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-
+import { Reviews } from "../reviews/Reviews"
 
 export const StorePage = () => {
     const [stores, setStores] = useState([])
@@ -48,6 +48,8 @@ export const StorePage = () => {
         </>
         )
     }
+
+    <Reviews className="reviews" />
    
    {
     stores.map(store=> 
