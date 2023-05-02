@@ -80,6 +80,25 @@ export const AddStoreForm = () => {
 
             <fieldset>
                 <div className="form-group">
+                    <label htmlFor="store__picture">Picture of Store:</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="enter the url of your photo."
+                        value={store.img}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...store }
+                                copy.img = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
                     <label htmlFor="address">Address:</label>
                     <input
                         required autoFocus
@@ -121,6 +140,7 @@ export const AddStoreForm = () => {
                 className="btn btn-primary">
                 Add Store
             </button>
+            <button onClick={() => navigate("/profile")}>Back to Profile</button>
         </form>
     )
 }

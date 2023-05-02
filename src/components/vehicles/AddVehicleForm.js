@@ -161,6 +161,7 @@ export const AddVehicleForm = () => {
                 className="btn btn-primary">
                 Add Vehicle
             </button>
+            <button onClick={() => navigate("/profile")}>Back to Profile</button>
         </form>
     )
 }

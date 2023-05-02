@@ -30,6 +30,7 @@ export const StorePage = () => {
     {
         stores.map(store => 
             <>
+            <img src={store.img} /><br></br>
             {store.name}<br></br>
             {store.address}<br></br>
             {store.description}<br></br>
@@ -40,7 +41,7 @@ export const StorePage = () => {
     }
     {
         stores.map(store =>
-        autoUserObject.storeOwner
+        autoUserObject.storeOwner && store.userId === autoUserObject.id
         ?<>
         <button onClick={() => navigate(`/stores/StoreEdit/${store.id}`)}>Edit Store Information</button>
         </>
@@ -52,12 +53,15 @@ export const StorePage = () => {
     <ReviewList className="reviews" />
    
    {
-    stores.map(store=> 
-    <section>
+    
+    
+    stores.map(store =>
+    <>
     <button onClick={() => navigate("/stores/StoreList")}>View Stores</button>
     <button onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button>
-    </section>
+    </>
     )
+    
     }
     </article>
 }
