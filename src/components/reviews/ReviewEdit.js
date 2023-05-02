@@ -7,7 +7,7 @@ export const ReviewEdit= () => {
     const [reviews, update] = useState({
         text: "",
         storeResponseText:"",
-        rating: "",
+        rating: 0,
         date: "",
         userId: 0,
         storeId: 0,
@@ -129,11 +129,11 @@ export const ReviewEdit= () => {
                             }
                         }>
                         <option value={0}>How Many Stars?</option>
-                        <option value={1}>1 Star</option>
-                        <option value={2}>2 Stars</option>
-                        <option value={3}>3 Stars</option>
-                        <option value={4}>4 Stars</option>
-                        <option value={5}>5 Stars</option>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
 
                     </select>
                 </div>

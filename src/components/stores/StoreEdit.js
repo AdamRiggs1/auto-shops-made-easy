@@ -81,6 +81,25 @@ export const StoreEdit = () => {
 
             <fieldset>
                 <div className="form-group">
+                    <label htmlFor="store__picture">Picture of Store:</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="name of store"
+                        value={store.img}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...store }
+                                copy.img = evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
                     <label htmlFor="address">Address:</label>
                     <input
                         required autoFocus
@@ -122,7 +141,7 @@ export const StoreEdit = () => {
                 className="btn btn-primary">
                 Submit Changes
             </button>
-            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}/:reviewId`)}}>Cancel Edit</button>
         </form>
     </>
     )

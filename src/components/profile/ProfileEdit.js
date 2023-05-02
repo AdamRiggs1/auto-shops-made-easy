@@ -9,7 +9,8 @@ export const ProfileEdit = () => {
     */
    const [profile, newProfile] = useState({
          name:"",
-         email:""
+         email:"",
+         img: ""
     })
     /*
     TODO: Use the useNavigation() hook so you can redirect
@@ -93,11 +94,31 @@ export const ProfileEdit = () => {
         </div>
     </fieldset>
 
+    <fieldset>
+        <div className="form-group">
+            <label htmlFor="profile__picture">Profile Picture:</label>
+            <input
+                required autoFocus
+                type="text"
+                className="form-control"
+                placeholder="place image url here"
+                value={profile.img}
+                onChange={
+                    (evt) => {
+                        const copy = { ...profile }
+                        copy.img = evt.target.value
+                        newProfile(copy)
+                    }
+                } />
+        </div>
+    </fieldset>
+
     <button
         onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
         className="btn btn-primary">
         Submit Changes
     </button>
+    <button onClick={() => navigate("/profile")}>Back to Profile</button>
 </form>
 </>
 )

@@ -29,7 +29,8 @@ export const StoreProfile = () => {
     return <article>
         <section>
         <h2>Store Owner Profile</h2>
-        <div>{profile.name}</div>
+        {profile.name} <br></br>
+        <img src={profile.img} />
     </section>
 
             <section>

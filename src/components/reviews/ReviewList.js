@@ -44,12 +44,12 @@ export const ReviewList = () => {
                 <>
                 {review.user.name}<br></br>
                 {review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br>
-                {review.rating}<br></br>
+                {review.rating} stars<br></br>
                 {review.text}<br></br>
                 {review.date}<br></br>
                 
                 {
-                autoUserObject.storeOwner === false
+                autoUserObject.id === review.userId
                 ?<>
                <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
                <button onClick={()=>{

@@ -7,7 +7,7 @@ export const StoreReviews = () => {
     const [reviews, newReview] = useState({
         text: "",
         storeResponseText:"",
-        rating: "",
+        rating: 0,
         date: "",
         userId: 0,
         storeId: 0,
@@ -74,7 +74,7 @@ export const StoreReviews = () => {
         .then(response => response.json())
         .then(
                 () => {
-                    navigate(`/stores/StorePage/${storeId}`)
+                    navigate(`/stores/StorePage/${storeId}/:reviewId`)
                 }
                 )
             }
@@ -125,11 +125,11 @@ export const StoreReviews = () => {
                             }
                         }>
                         <option value={0}>How Many Stars?</option>
-                        <option value={1}>1 Star</option>
-                        <option value={2}>2 Stars</option>
-                        <option value={3}>3 Stars</option>
-                        <option value={4}>4 Stars</option>
-                        <option value={5}>5 Stars</option>
+                        <option value={1}>1</option>
+                        <option value={2}>2</option>
+                        <option value={3}>3</option>
+                        <option value={4}>4</option>
+                        <option value={5}>5</option>
 
                     </select>
                 </div>
@@ -177,7 +177,7 @@ export const StoreReviews = () => {
         className="btn btn-primary">
         Submit Review
     </button>
-    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}/:reviewId`)}}>Cancel Edit</button>
 </form>
 
 
