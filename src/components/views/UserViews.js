@@ -30,7 +30,7 @@ export const UserViews = () => {
 
                 <Route path="stores/StoreList" element={ <StoreList />} />
 
-                <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
+                <Route path="stores/StorePage/:storeId/:reviewId" element={ <StorePage />} />
 
                 <Route path="stores/StoreReviews/:storeId" element={ <StoreReviews /> } />
 

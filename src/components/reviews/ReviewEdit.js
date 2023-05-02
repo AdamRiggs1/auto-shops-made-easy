@@ -22,18 +22,6 @@ export const ReviewEdit= () => {
     const localAutoUser = localStorage.getItem("auto_user")
     const autoUserObject = JSON.parse(localAutoUser)
     //fetch the reviews array
-    /*useEffect( ()=> {
-        if (reviewId) {
-            getReview(reviewId)
-        }
-    }, [reviewId]
-    )
-
-    const getReview = (reviewId) => {
-        fetch(`http://localhost:8088/reviews/${reviewId}`)
-        .then((res) => res.json())
-        .then(update)
-    }*/
 
     useEffect(
         () => {
