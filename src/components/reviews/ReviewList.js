@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 
 
-export const Reviews = () => {
+export const ReviewList = () => {
     const [reviews, setReviews] = useState([])
 
     const { storeId } = useParams()
@@ -13,8 +13,6 @@ export const Reviews = () => {
     const localAutoUser = localStorage.getItem("auto_user")
     const autoUserObject = JSON.parse(localAutoUser)
 
-    
-    
     useEffect(
         ()=> {
         fetch (`http://localhost:8088/reviews?storeId=${storeId}&_expand=vehicle&_expand=user`)
@@ -27,9 +25,18 @@ export const Reviews = () => {
     },
     []
     )
+    
+    const getAllReviews=() => {
+        fetch (`http://localhost:8088/reviews?storeId=${storeId}&_expand=vehicle&_expand=user`)
+        .then(response => response.json())
+        .then(
+            (reviewArray)=> {
+                setReviews(reviewArray)
+            }
+        )
+    }
 
-
-    //use .map to iterate through the reviews array to display all stores
+    //use .map to iterate through the reviews array to display all reviews
 
     return <article className="reviews">
     {
@@ -43,7 +50,15 @@ export const Reviews = () => {
                 
                 {
                 autoUserObject.storeOwner === false
-               ? <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
+                ?<>
+               <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
+               <button onClick={()=>{
+                fetch(`http://localhost:8088/reviews/${review.id}`,{
+                    method: "DELETE"
+                })
+                .then(()=>{getAllReviews()})
+            }} className="review__delete">Delete</button>
+               </>
                :<></>
                 }   
                 
