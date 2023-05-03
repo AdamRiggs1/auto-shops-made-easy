@@ -1,9 +1,5 @@
 import { useEffect, useState} from 'react'
-import { useNavigate, Link } from 'react-router-dom'
 import { Store } from './Store'
-import { StoreSearch } from './StoreSearch'
-
-
 
 export const StoreList = ({ searchTermState }) => {
     const [stores, setStores] = useState([])
@@ -16,6 +12,7 @@ export const StoreList = ({ searchTermState }) => {
         .then(
             (storeArray)=> {
                 setStores(storeArray)
+                setFiltered(storeArray)
             }
         )
     },
