@@ -7,6 +7,8 @@ import { StoreList } from "../stores/StoreList"
 import { StorePage } from "../stores/StorePage"
 import { StoreReviews } from "../stores/StoreReviews"
 import { ReviewEdit } from "../reviews/ReviewEdit"
+import { UserReviews } from "../reviews/UserReviews"
+import { ReviewEditFromProfile } from "../reviews/ReviewEditFromProfile"
 
 export const UserViews = () => {
 	return (
@@ -30,11 +32,15 @@ export const UserViews = () => {
 
                 <Route path="stores/StoreList" element={ <StoreList />} />
 
-                <Route path="stores/StorePage/:storeId/:reviewId" element={ <StorePage />} />
+                <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
 
                 <Route path="stores/StoreReviews/:storeId" element={ <StoreReviews /> } />
 
                 <Route path="reviews/:storeId/:reviewId" element={ <ReviewEdit /> } />
+
+                <Route path="reviews" element={ <UserReviews /> } />
+
+                <Route path="reviews/user/:reviewId" element={ <ReviewEditFromProfile /> } />
 
             </Route>
         </Routes>
