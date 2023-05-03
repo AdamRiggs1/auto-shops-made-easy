@@ -74,7 +74,7 @@ export const StoreReviews = () => {
         .then(response => response.json())
         .then(
                 () => {
-                    navigate(`/stores/StorePage/${storeId}/:reviewId`)
+                    navigate(`/stores/StorePage/${storeId}`)
                 }
                 )
             }
@@ -177,7 +177,7 @@ export const StoreReviews = () => {
         className="btn btn-primary">
         Submit Review
     </button>
-    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}/:reviewId`)}}>Cancel Edit</button>
+    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
 </form>
 
 

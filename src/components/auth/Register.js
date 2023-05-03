@@ -5,8 +5,9 @@ import "./Login.css"
 export const Register = (props) => {
     const [user, setUser] = useState({
         email: "",
-        fullName: "",
-        isStaff: false
+        name: "",
+        isStoreOwner: false,
+        img: ""
     })
     let navigate = useNavigate()
 
@@ -56,11 +57,11 @@ export const Register = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Kandy Korner</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register for Auto Shops Made Easy</h1>
                 <fieldset>
-                    <label htmlFor="fullName"> Full Name </label>
+                    <label htmlFor="name"> Full Name </label>
                     <input onChange={updateUser}
-                           type="text" id="fullName" className="form-control"
+                           type="text" id="name" className="form-control"
                            placeholder="Enter your name" required autoFocus />
                 </fieldset>
                 <fieldset>
@@ -70,13 +71,19 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="img"> Profile Picture </label>
+                    <input onChange={updateUser}
+                        type="text" id="img" className="form-control"
+                        placeholder="Place url of your picture" />
+                </fieldset>
+                <fieldset>
                     <input onChange={(evt) => {
                         const copy = {...user}
-                        copy.isStaff = evt.target.checked
+                        copy.isStoreOwner = evt.target.checked
                         setUser(copy)
                     }}
-                        type="checkbox" id="isStaff" />
-                    <label htmlFor="email"> I am an employee </label>
+                        type="checkbox" id="isStoreOwner" />
+                    <label htmlFor="email"> I own a store </label>
                 </fieldset>
                 <fieldset>
                     <button type="submit"> Register </button>
