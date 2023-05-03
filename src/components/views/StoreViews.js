@@ -5,7 +5,7 @@ import { AddVehicleForm } from "../vehicles/AddVehicleForm"
 import { VehicleList } from "../vehicles/VehicleList"
 import { AddStoreForm } from "../stores/AddStoreForm"
 import { OwnerStoreList } from "../stores/OwnerStoreList"
-import { StoreList } from "../stores/StoreList"
+import { StoreContainer } from "../stores/StoreContainer"
 import { StorePage } from "../stores/StorePage"
 import { StoreEdit } from "../stores/StoreEdit"
 import { StoreReviews } from "../stores/StoreReviews"
@@ -37,7 +37,7 @@ export const StoreViews = () => {
 
                 <Route path="stores/OwnerStoreList" element={ <OwnerStoreList />} />
 
-                <Route path="stores/StoreList" element={ <StoreList />} />
+                <Route path="stores/StoreContainer" element={ <StoreContainer />} />
 
                 <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
 

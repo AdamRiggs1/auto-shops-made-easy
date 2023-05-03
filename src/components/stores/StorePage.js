@@ -57,7 +57,7 @@ export const StorePage = () => {
     
     stores.map(store =>
     <>
-    <button onClick={() => navigate("/stores/StoreList")}>View Stores</button>
+    <button onClick={() => navigate("/stores/StoreContainer")}>View Stores</button>
     <button onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button>
     </>
     )
