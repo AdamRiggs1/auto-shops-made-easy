@@ -141,7 +141,7 @@ export const StoreEdit = () => {
                 className="btn btn-primary">
                 Submit Changes
             </button>
-            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}/:reviewId`)}}>Cancel Edit</button>
+            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
         </form>
     </>
     )
