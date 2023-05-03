@@ -3,7 +3,7 @@ import { Profile } from "../profile/Profile"
 import { ProfileEdit } from "../profile/ProfileEdit"
 import { AddVehicleForm } from "../vehicles/AddVehicleForm"
 import { VehicleList } from "../vehicles/VehicleList"
-import { StoreList } from "../stores/StoreList"
+import { StoreContainer } from "../stores/StoreContainer"
 import { StorePage } from "../stores/StorePage"
 import { StoreReviews } from "../stores/StoreReviews"
 import { ReviewEdit } from "../reviews/ReviewEdit"
@@ -30,7 +30,7 @@ export const UserViews = () => {
 
                 <Route path="vehicles/VehicleList" element={ <VehicleList />} />
 
-                <Route path="stores/StoreList" element={ <StoreList />} />
+                <Route path="stores/StoreContainer" element={ <StoreContainer />} />
 
                 <Route path="stores/StorePage/:storeId" element={ <StorePage />} />
 
