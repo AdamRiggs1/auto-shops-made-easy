@@ -38,6 +38,7 @@ export const UserProfile = () => {
                 <button onClick={() => navigate("/vehicles/AddVehicleForm")}>Add Vehicle</button>
                 <button onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
                 <button onClick={() => navigate("/reviews")}>View Your Reviews</button>
+                <button onClick={() => navigate("/FavoriteStores")}>View Your Favorite Stores</button>
             </section>
 
             </article>

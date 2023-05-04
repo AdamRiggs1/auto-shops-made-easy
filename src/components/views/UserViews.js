@@ -9,6 +9,7 @@ import { StoreReviews } from "../stores/StoreReviews"
 import { ReviewEdit } from "../reviews/ReviewEdit"
 import { UserReviews } from "../reviews/UserReviews"
 import { ReviewEditFromProfile } from "../reviews/ReviewEditFromProfile"
+import { FavoriteStoreList } from "../favoriteStores/FavoriteStoreList"
 
 export const UserViews = () => {
 	return (
@@ -41,6 +42,8 @@ export const UserViews = () => {
                 <Route path="reviews" element={ <UserReviews /> } />
 
                 <Route path="reviews/user/:reviewId" element={ <ReviewEditFromProfile /> } />
+
+                <Route path="FavoriteStores" element={ <FavoriteStoreList />} />
 
             </Route>
         </Routes>
