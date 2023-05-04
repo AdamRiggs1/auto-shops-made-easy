@@ -22,18 +22,7 @@ export const AddFavoriteStore = ({store}) => {
     const localAutoUser = localStorage.getItem("auto_user")
     const autoUserObject = JSON.parse(localAutoUser)
 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/stores?id=20}`)
-                .then(response => response.json())
-                .then(
-                    (setFavoriteStoreArray) => {
-                        setFavoriteStore(setFavoriteStoreArray)
-                    }
-                )
-        },
-        []
-    )
+
 
     const handleSaveButtonClick = (event) => {
         event.preventDefault()

@@ -1,6 +1,7 @@
 import { useEffect, useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FavoriteStore } from './FavoriteStore'
+import { DeleteFavoriteStore } from './DeleteFavoriteStore'
 
 
 
@@ -26,27 +27,16 @@ export const FavoriteStoreList = () => {
     []
     )
 
-    /*useEffect(
-        ()=> {
-        fetch (`http://localhost:8088/stores?userId=${autoUserObject.id}`)
-        .then(response => response.json())
-        .then(
-            (storeArray)=> {
-                setStores(storeArray)
-            }
-        )
-    },
-    []
-    )*/
+
 
     //this variable will get the info from API and go to the jsx in the function
 
-    const getAllStores = () => {
-            fetch (`http://localhost:8088/stores?userId=${autoUserObject.id}`)
+    const getAllFavoriteStores = () => {
+            fetch (`http://localhost:8088/favoriteStores?favoriteStoreUserId=${autoUserObject.id}`)
             .then(response => response.json())
             .then(
                 (storeArray)=> {
-                    setStores(storeArray)
+                    setFavoriteStores(storeArray)
                 }
             )
         }    
@@ -59,6 +49,8 @@ export const FavoriteStoreList = () => {
         favoriteStores.map(favoriteStore => 
             <>
         <FavoriteStore favoriteStore={favoriteStore} />
+        <DeleteFavoriteStore favoriteStore={favoriteStore}
+                            getAllFavoriteStores={getAllFavoriteStores}/>
             </>
         )
         
