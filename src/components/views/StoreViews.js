@@ -13,6 +13,7 @@ import { ReviewEdit } from "../reviews/ReviewEdit"
 import { UserReviews } from "../reviews/UserReviews"
 import { ReviewEditFromProfile } from "../reviews/ReviewEditFromProfile"
 import { FavoriteStoreList } from "../favoriteStores/FavoriteStoreList"
+import { AddFavoriteStore } from "../favoriteStores/AddFavoriteStore"
 
 export const StoreViews = () => {
 	return (
@@ -53,6 +54,8 @@ export const StoreViews = () => {
                 <Route path="reviews/user/:reviewId" element={ <ReviewEditFromProfile /> } />
 
                 <Route path="FavoriteStores" element={ <FavoriteStoreList />} />
+
+                <Route path="AddFavoriteStores/:storeId" element={ <AddFavoriteStore />} />
 
             
 

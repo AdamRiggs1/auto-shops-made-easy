@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ReviewList } from "../reviews/ReviewList"
+import { AddFavoriteStore } from "../favoriteStores/AddFavoriteStore"
 
 export const StorePage = () => {
     const [stores, setStores] = useState([])
@@ -59,6 +60,7 @@ export const StorePage = () => {
     <>
     <button onClick={() => navigate("/stores/StoreContainer")}>View Stores</button>
     <button onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button>
+    <AddFavoriteStore store={store} />
     </>
     )
     

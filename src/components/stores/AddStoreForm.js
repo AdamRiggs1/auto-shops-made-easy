@@ -32,7 +32,8 @@ export const AddStoreForm = () => {
             userId: autoUserObject.id,
             name: store.name,
             address: store.address,
-            description: store.description
+            description: store.description,
+            img: store.img
         }
 
 
