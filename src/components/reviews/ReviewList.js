@@ -74,7 +74,7 @@ export const ReviewList = ({ store }) => {
                                 }} className="review__delete">Delete</button>
                             </>
                             : <></>
-                    }
+                    }<br></br>
 
                     {
                         stores.map(store =>
@@ -84,7 +84,7 @@ export const ReviewList = ({ store }) => {
                                 : <></>
                         )
 
-                    }
+                    }<br></br>
 
 
                 </>
