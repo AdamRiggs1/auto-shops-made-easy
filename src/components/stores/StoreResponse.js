@@ -124,9 +124,9 @@ export const StoreResponse = () => {
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
-                Submit Review
+                Submit Response
             </button>
-            <button onClick={() => { navigate(`/stores/StorePage/${storeId}`) }}>Cancel Edit</button>
+            <button onClick={() => { navigate(`/stores/StorePage/${storeId}`) }}>Cancel Response</button>
         </form>
         </section>
     </article>
