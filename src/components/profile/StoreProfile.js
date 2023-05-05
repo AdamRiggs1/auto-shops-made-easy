@@ -39,7 +39,7 @@ export const StoreProfile = () => {
                 <button onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
                 <button onClick={() => navigate("/reviews")}>View Your Reviews</button>
                 <button onClick={() => navigate("/stores/AddStoreForm")}>Add Store</button>
-                <button onClick={() => navigate("/stores/OwnerStoreList")}>Your Stores</button>
+                <button onClick={() => navigate("/stores/OwnerStoreList")}>View Your Stores</button>
                 <button onClick={() => navigate("/FavoriteStores")}>View Your Favorite Stores</button>
             </section>
 
