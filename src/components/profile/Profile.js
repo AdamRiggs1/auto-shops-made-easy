@@ -1,5 +1,6 @@
 import { UserProfile } from "./UserProfile"
 import { StoreProfile } from "./StoreProfile"
+import "./profile.css"
 
 export const Profile = () => {
 

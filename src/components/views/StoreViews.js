@@ -14,14 +14,15 @@ import { UserReviews } from "../reviews/UserReviews"
 import { ReviewEditFromProfile } from "../reviews/ReviewEditFromProfile"
 import { FavoriteStoreList } from "../favoriteStores/FavoriteStoreList"
 import { StoreResponse } from "../stores/StoreResponse"
+import "./views.css"
 
 export const StoreViews = () => {
 	return (
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Auto Shops Made Easy</h1>
-                    <div>Auto Shopping for Non-Car-Experts
+                    <h1 className="header">Auto Shops Made Easy</h1>
+                    <div className="subheader">Auto Shopping for Non-Car-Experts
                     </div>
 
                     <Outlet />
