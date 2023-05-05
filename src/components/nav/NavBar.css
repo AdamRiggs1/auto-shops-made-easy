@@ -2,14 +2,34 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
+    background-color: rgb(207, 42, 42);
+    height: 70px
 }
 
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__link__profile {
+    margin-left: 100px;
+    color: yellow;
+}
+
+.navbar__link__list {
+    margin-left: 350px;
+    color: yellow;
+
+}
+
+.navbar__link__logout {
+    color: yellow;
 }
 
 .navbar__logout {
     margin-left: auto;
+    color: yellow;
 }
 
