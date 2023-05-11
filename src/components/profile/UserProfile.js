@@ -33,12 +33,24 @@ export const UserProfile = () => {
         <img className="profile__pic" src={profile.img} />
     </section>
 
-            <section>
-                <button onClick={() => navigate("/profile/ProfileEdit")}>Edit Profile</button>
-                <button onClick={() => navigate("/vehicles/AddVehicleForm")}>Add Vehicle</button>
-                <button onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
-                <button onClick={() => navigate("/reviews")}>View Your Reviews</button>
-                <button onClick={() => navigate("/FavoriteStores")}>View Your Favorite Stores</button>
+            <section className="profile__buttons">
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Profile</h4>
+                <button className="profile__button" onClick={() => navigate("/profile/ProfileEdit")}>Edit Profile</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Vehicles</h4>
+                <button className="profile__button" onClick={() => navigate("/vehicles/AddVehicleForm")}>Add Vehicle</button><br></br>
+                <button className="profile__button" onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Reviews</h4>
+                <button className="profile__button" onClick={() => navigate("/reviews")}>View Your Reviews</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Favorite Stores</h4>
+                <button className="profile__button" onClick={() => navigate("/FavoriteStores")}>View Your Favorite Stores</button>
+                </div>
             </section>
 
             </article>
