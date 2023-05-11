@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ReviewList } from "../reviews/ReviewList"
 import { AddFavoriteStore } from "../favoriteStores/AddFavoriteStore"
-import { StoreRating } from "./StoreRating"
+import "./StorePage.css"
 
 export const StorePage = () => {
     const [stores, setStores] = useState([])
@@ -32,14 +32,15 @@ export const StorePage = () => {
     {
         stores.map(store => 
             <>
-            <img src={store.img} /><br></br>
-            {store.name}<br></br>
-            {store.address}<br></br>
-            {store.description}<br></br>
+            <div className="store__name">{store.name}<br></br></div>
+            <img className="store__img" src={store.img} /><br></br>
+            <div className="store__address">{store.address}<br></br></div>
+            <div className="store__description__header">About Us:</div>
+            <div className="store__description">{store.description}<br></br></div>
             </>
         )
-      
-       
+             
+        
     }
     {
         stores.map(store =>
@@ -50,9 +51,8 @@ export const StorePage = () => {
         :<>
         </>
         )
-        
     }
-    
+
     <ReviewList className="reviews" />
    
    {

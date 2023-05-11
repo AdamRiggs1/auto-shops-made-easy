@@ -34,13 +34,28 @@ export const StoreProfile = () => {
     </section>
 
             <section>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Profile</h4>
                 <button onClick={() => navigate("/profile/ProfileEdit")}>Edit Profile</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Vehicles</h4>
                 <button onClick={() => navigate("/vehicles/AddVehicleForm")}>Add Vehicle</button>
                 <button onClick={() => navigate("/vehicles/VehicleList")}>View Vehicles</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Reviews</h4>
                 <button onClick={() => navigate("/reviews")}>View Your Reviews</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Stores</h4>
                 <button onClick={() => navigate("/stores/AddStoreForm")}>Add Store</button>
                 <button onClick={() => navigate("/stores/OwnerStoreList")}>View Your Stores</button>
+                </div>
+                <div className="profile__div">
+                <h4 className="profile__manage">Manage Favorite Stores</h4>
                 <button onClick={() => navigate("/FavoriteStores")}>View Your Favorite Stores</button>
+                </div>
             </section>
 
             </article>

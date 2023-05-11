@@ -21,9 +21,11 @@ export const StoreViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
+                    <section className="title">
                     <h1 className="header">Auto Shops Made Easy</h1>
                     <div className="subheader">Auto Shopping for Non-Car-Experts
                     </div>
+                    </section>
 
                     <Outlet />
                 </>
