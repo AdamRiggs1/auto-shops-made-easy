@@ -31,3 +31,32 @@
     justify-content: center;
     margin: 25px;
 }
+
+.store_page_buttons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 500px;
+    border: 2px solid;
+    background-color: red
+}
+
+.leave_review_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.favorite_store_button {
+    display: flex;
+    justify-content: center;
+}
+
+.view_stores_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}

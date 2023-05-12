@@ -1,0 +1,34 @@
+.single-store {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 500px;
+  }
+
+.store_info_link {
+    display: flex;
+    justify-content: center;
+}
+
+.store_list_address {
+    display: flex;
+    justify-content: center;
+}
+
+.store_list_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+    width: 450px;   
+}
+
+.store_search_bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 400px;
+}
