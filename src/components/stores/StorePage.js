@@ -59,11 +59,11 @@ export const StorePage = () => {
     
     
     stores.map(store =>
-    <>
-    <button onClick={() => navigate("/stores/StoreContainer")}>View Stores</button>
-    <button onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button>
-    <AddFavoriteStore store={store} />
-    </>
+    <section className="store_page_buttons">
+    <button className="leave_review_button" onClick={() => navigate(`/stores/StoreReviews/${store.id}`)}>Leave a Review</button><br></br>
+    <div className="favorite_store_button"><AddFavoriteStore store={store} /><br></br></div>
+    <button className="view_stores_button" onClick={() => navigate("/stores/StoreContainer")}>View Stores</button><br></br>
+    </section>
     )
     
     }
