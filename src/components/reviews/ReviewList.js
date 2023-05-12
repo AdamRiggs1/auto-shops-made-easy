@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import "./ReviewList.css"
 
 
 
@@ -54,17 +55,18 @@ export const ReviewList = ({ store }) => {
     return <article className="reviews">
         {
             reviews.map(review =>
-                <>
-                    {review.user.name}<br></br>
-                    {review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br>
-                    {review.rating} stars<br></br>
-                    {review.text}<br></br>
-                    {review.date}<br></br>
-                    {review.storeResponseText}<br></br>
+                <section className="review__list">
+                    <div className="review__name">{review.user.name}<br></br></div>
+                    <div className="review__vehicle">{review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br></div>
+                    <div className="review__rating">{review.rating} stars<br></br></div>
+                    <div className="review__text">{review.text}<br></br></div>
+                    <div className="review__date">{review.date}<br></br></div>
+                    <div className="review__response__header">Response from Management:</div>
+                    <div className="review__response">{review.storeResponseText}<br></br></div>
 
                     {
                         autoUserObject.id === review.userId
-                            ? <>
+                            ? <section className="review__buttons">
                                 <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
                                 <button onClick={() => {
                                     fetch(`http://localhost:8088/reviews/${review.id}`, {
@@ -72,7 +74,7 @@ export const ReviewList = ({ store }) => {
                                     })
                                         .then(() => { getAllReviews() })
                                 }} className="review__delete">Delete</button>
-                            </>
+                            </section>
                             : <></>
                     }<br></br>
 
@@ -80,14 +82,14 @@ export const ReviewList = ({ store }) => {
                         stores.map(store =>
 
                             autoUserObject.id === store.userId
-                                ? <><button onClick={() => { navigate(`/StoreResponse/${review.id}/${storeId}`) }}>Respond</button></>
+                                ? <section className="review__buttons"><button onClick={() => { navigate(`/StoreResponse/${review.id}/${storeId}`) }}>Respond</button></section>
                                 : <></>
                         )
 
                     }<br></br>
 
 
-                </>
+                </section>
 
 
 
