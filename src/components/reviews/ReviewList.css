@@ -1,0 +1,58 @@
+.review__list {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  border: 2px solid;
+  width: 500px;
+}
+
+.review__name {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.review__vehicle {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.review__rating {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.review__text {
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.review__date {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    background-color: red;
+}
+
+.review__response {
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+}
+
+.review__response__header {
+    display: flex;
+    justify-content: center;
+}
+
+.review__buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
