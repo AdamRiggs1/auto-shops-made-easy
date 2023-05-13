@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import './VehicleList.css'
 
 export const VehicleList = () => {
     const [vehicles, setVehicles] = useState([])
@@ -39,26 +39,28 @@ export const VehicleList = () => {
         //there should be a delete button next to each car
 
     return <article className="vehicles">
+        <h2 className="vehicle_header">Your Cars</h2>
     {
         vehicles.map(vehicle => 
-            <>
-            {vehicle.make}
-            {vehicle.model}
-            {vehicle.year}
-            {vehicle.vehicleType.vehicleType}
-            <button onClick={() => {
+            <section className="vehicle_list">
+            <div className="vehicle_make">{vehicle.make} {vehicle.model}</div>
+            <div className="vehicle_year">{vehicle.year}</div>
+            <div className="vehicle_type">{vehicle.vehicleType.vehicleType}</div>
+            <button
+            className="vehicle_delete_button" onClick={() => {
                 fetch(`http://localhost:8088/vehicles/${vehicle.id}`, {
                     method: "DELETE"
                 })
                 .then(()=>{getAllVehicles()})
             }}>Delete</button>
 
-            </>
+            </section>
         )
         
     }
     <section>
-    <button onClick={() => navigate("/profile")}>Back to Profile</button>
+    <button
+    className="back_to_profile_button" onClick={() => navigate("/profile")}>Back to Profile</button>
     </section>
     </article>
 

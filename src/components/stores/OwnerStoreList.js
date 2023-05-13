@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-
+import './StoreList.css'
 
 
 export const OwnerStoreList = () => {
@@ -42,21 +42,24 @@ export const OwnerStoreList = () => {
     return <article className="stores">
     {
         stores.map(store => 
-            <>
+            <section className="owner_stores">
         <Link className="store_info_link" to={""}>{store.name}</Link>
-            {store.address}
-            <button onClick={() => {
+            <div className="store_list_address">{store.address}</div>
+            <img className="store_list_img" src={store.img} />
+            <button
+            className="owner_stores_delete_button"
+             onClick={() => {
                 fetch(`http://localhost:8088/stores/${store.id}`, {
                     method: "DELETE"
                 })
                 .then(()=>{getAllStores()})
             }}>Delete</button> 
-            </>
+            </section>
         )
         
     }
     <section>
-    <button onClick={() => navigate("/profile")}>Back to Profile</button>
+    <button className="back_to_profile_button" onClick={() => navigate("/profile")}>Back to Profile</button>
     </section>
     </article>
 

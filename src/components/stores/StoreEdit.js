@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./StoreEdit.css"
 
 
 export const StoreEdit = () => {
@@ -136,12 +137,14 @@ export const StoreEdit = () => {
                 </div>
             </fieldset>
 
+            <section className="store_edit_buttons">
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Submit Changes
             </button>
-            <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+            <button className="store_edit_back" onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+            </section>
         </form>
     </>
     )

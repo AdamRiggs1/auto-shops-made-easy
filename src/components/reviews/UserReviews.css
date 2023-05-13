@@ -1,0 +1,60 @@
+.review_list {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 300px;
+}
+
+.user_review_store_name {
+    display: flex;
+    justify-content: center;
+}
+
+.user_review_vehicle {
+    display: flex;
+    justify-content: center;
+}
+
+.user_review_rating {
+    display: flex;
+    justify-content: center;
+}
+
+.user_review_text {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+}
+
+.user_review_date {
+    display: flex;
+    justify-content: center;
+}
+
+.user_review_delete_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.user_review_edit_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.back_to_profile_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './ReviewEdit.css'
 
 export const ReviewEdit= () => {
     const [vehicles, setVehicles] = useState([])
@@ -87,8 +88,8 @@ export const ReviewEdit= () => {
 
     return(       
          <form className="reviewForm">
-    <h2 className="reviewForm__title">Edit Your Review</h2>
-    <h3 className="reviewForm__subheading">Describe the cost of the repair, as well as the specifc items you had fixed</h3>
+    <h2 className="reviewForm_title">Edit Your Review</h2>
+    <h3 className="reviewForm_subheading">Describe the cost of the repair, as well as the specifc items you had fixed</h3>
    
             <fieldset>
                 <div className="form-group">
@@ -176,12 +177,14 @@ export const ReviewEdit= () => {
         </div>
     </fieldset>
 
+    <section className="review_form_buttons">
     <button
         onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-        className="btn btn-primary">
-        Submit Review
+        className="review_form_submit">
+        Submit Review Edit
     </button>
-    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+    <button className="review_form_back" onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+    </section>
 </form>
 
 

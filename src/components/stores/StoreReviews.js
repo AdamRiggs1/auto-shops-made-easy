@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './StoreReviews.css'
 
 export const StoreReviews = () => {
     const [vehicles, setVehicles] = useState([])
@@ -172,14 +173,15 @@ export const StoreReviews = () => {
         </div>
     </fieldset>
 
+    <section className="review_form_buttons">
     <button
         onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-        className="btn btn-primary">
+        className="review_form_submit">
         Submit Review
     </button>
-    <button onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+    <button className="review_form_back" onClick={()=> {navigate(`/stores/StorePage/${storeId}`)}}>Cancel Edit</button>
+    </section>
 </form>
-
 
     )
 }

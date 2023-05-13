@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-
+import "./UserReviews.css"
 
 
 export const UserReviews = () => {
@@ -40,34 +40,34 @@ export const UserReviews = () => {
     return <article className="reviews">
     {
             reviews.map(review => 
-                <>
-                {review.store.name}<br></br>
-                {review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br>
-                {review.rating} stars<br></br>
-                {review.text}<br></br>
-                {review.date}<br></br>
+                <section className="review_list">
+                <div className="user_review_store_name">{review.store.name}<br></br></div>
+                <div className="user_review_vehicle">{review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br></div>
+                <div className="user_review_rating">{review.rating} stars<br></br></div>
+                <div className="user_review_text">{review.text}<br></br></div>
+                <div className="user_review_date">{review.date}<br></br></div>
                 
                 {
                 autoUserObject.id === review.userId
                 ?<>
-               <button onClick={() => navigate(`/reviews/user/${review.id}`)}>Edit Review</button>
-               <button onClick={()=>{
+               <button className="user_review_edit_button" onClick={() => navigate(`/reviews/user/${review.id}`)}>Edit Review</button>
+               <button className="user_review_delete_button" onClick={()=>{
                 fetch(`http://localhost:8088/reviews/${review.id}`,{
                     method: "DELETE"
                 })
                 .then(()=>{getAllReviews()})
-            }} className="review__delete">Delete</button><br></br>
+            }} >Delete</button><br></br>
                </>
                :<></>
                 }   
                 
-                </>
+                </section>
                 
                 
                 
             )
     }
-    <button onClick={() => navigate("/profile")}>Back to Profile</button>
+    <button className="back_to_profile_button" onClick={() => navigate("/profile")}>Back to Profile</button>
     </article>
 
 }

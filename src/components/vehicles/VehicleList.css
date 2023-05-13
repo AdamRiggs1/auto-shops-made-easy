@@ -1,0 +1,45 @@
+.vehicle_list {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 300px;
+}
+
+.vehicle_make {
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle_year {
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle_type {
+    display: flex;
+    justify-content: center;
+}
+
+.vehicle_header {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.vehicle_delete_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.back_to_profile_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

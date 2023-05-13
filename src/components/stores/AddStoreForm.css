@@ -1,0 +1,15 @@
+.storeForm__title {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.store_form_buttons {
+    display: block;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.store_form_back {
+    margin-top: 20px;
+}

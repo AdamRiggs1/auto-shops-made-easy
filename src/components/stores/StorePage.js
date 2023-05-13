@@ -31,13 +31,13 @@ export const StorePage = () => {
     return <article className="stores">
     {
         stores.map(store => 
-            <>
+            <section className="store">
             <div className="store__name">{store.name}<br></br></div>
             <img className="store__img" src={store.img} /><br></br>
             <div className="store__address">{store.address}<br></br></div>
             <div className="store__description__header">About Us:</div>
             <div className="store__description">{store.description}<br></br></div>
-            </>
+            </section>
         )
              
         
@@ -45,9 +45,9 @@ export const StorePage = () => {
     {
         stores.map(store =>
         autoUserObject.storeOwner && store.userId === autoUserObject.id
-        ?<>
-        <button onClick={() => navigate(`/stores/StoreEdit/${store.id}`)}>Edit Store Information</button>
-        </>
+        ?<div className="store_edit_button_container">
+        <button className="store_edit_button" onClick={() => navigate(`/stores/StoreEdit/${store.id}`)}>Edit Store Information</button>
+        </div>
         :<>
         </>
         )
