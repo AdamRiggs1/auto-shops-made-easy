@@ -2,7 +2,7 @@ import { useEffect, useState} from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FavoriteStore } from './FavoriteStore'
 import { DeleteFavoriteStore } from './DeleteFavoriteStore'
-
+import "../stores/StoreList.css"
 
 
 export const FavoriteStoreList = () => {
@@ -47,11 +47,11 @@ export const FavoriteStoreList = () => {
     return <article className="stores">
     {
         favoriteStores.map(favoriteStore => 
-            <>
+            <section className="favorite_store">
         <FavoriteStore favoriteStore={favoriteStore} />
         <DeleteFavoriteStore favoriteStore={favoriteStore}
                             getAllFavoriteStores={getAllFavoriteStores}/>
-            </>
+            </section>
         )
         
     }

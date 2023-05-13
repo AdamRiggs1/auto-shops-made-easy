@@ -22,8 +22,8 @@ export const DeleteFavoriteStore = ({favoriteStore, getAllFavoriteStores}) => {
 return(
     <>
     <button
-    onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-    className="btn btn-primary">
+    className="favorite_store_delete_button"
+    onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
     Remove From Favorites
 </button>
 </>

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./AddStoreForm.css"
 
 export const AddStoreForm = () => {
     /*
@@ -136,12 +137,14 @@ export const AddStoreForm = () => {
             </div>
             </fieldset>
 
+            <section className="store_form_buttons">
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Add Store
             </button>
-            <button onClick={() => navigate("/profile")}>Back to Profile</button>
+            <button className="store_form_back" onClick={() => navigate("/profile")}>Back to Profile</button>
+            </section>
         </form>
     )
 }

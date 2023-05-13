@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import './StoreReviews.css'
 
 export const StoreResponse = () => {
     //set the state for reviews
@@ -88,14 +89,14 @@ export const StoreResponse = () => {
         {
 
             allReviews.map(review =>
-                <>
-                    {review.user.name}<br></br>
-                    {review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br>
-                    {review.rating} stars<br></br>
-                    {review.text}<br></br>
-                    {review.date}<br></br>
+                <section className="responsed_review">
+                    <div className="response_name">{review.user.name}<br></br></div>
+                    <div className="response_vehicle">{review.vehicle.make} {review.vehicle.model} {review.vehicle.year} <br></br></div>
+                    <div className="response_rating">{review.rating} stars<br></br></div>
+                    <div className="response_text">{review.text}<br></br></div>
+                    <div className="response_date">{review.date}<br></br></div>
 
-                </>
+                </section>
             )
         }
         <section><form className="reviewForm">
@@ -121,12 +122,14 @@ export const StoreResponse = () => {
                 </div>
             </fieldset>
 
+            <section className="review_form_buttons">
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
                 className="btn btn-primary">
                 Submit Response
             </button>
-            <button onClick={() => { navigate(`/stores/StorePage/${storeId}`) }}>Cancel Response</button>
+            <button className="review_form_back" onClick={() => { navigate(`/stores/StorePage/${storeId}`) }}>Cancel Response</button>
+            </section>
         </form>
         </section>
     </article>

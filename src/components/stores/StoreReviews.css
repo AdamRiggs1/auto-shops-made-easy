@@ -1,0 +1,54 @@
+.reviewForm__title {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.reviewForm__subheading {
+    display: flex;
+    justify-content: center;
+}
+
+.review_form_buttons {
+    display: block;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.review_form_back {
+    margin-top: 20px;
+}
+
+.responsed_review {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 500px;
+}
+
+.response_name {
+    display: flex;
+    justify-content: center;
+}
+
+.response_vehicle {
+    display: flex;
+    justify-content: center;
+}
+
+.response_rating {
+    display: flex;
+    justify-content: center;
+}
+
+.response_text {
+    display: flex;
+    justify-content: center;
+}
+
+.response_date {
+    display: flex;
+    justify-content: center;
+}

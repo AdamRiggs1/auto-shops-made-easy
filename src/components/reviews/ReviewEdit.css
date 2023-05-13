@@ -1,0 +1,19 @@
+.reviewForm_title {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.reviewForm_subheading {
+    display: flex;
+    justify-content: center;
+}
+
+.review_form_buttons {
+    display: block;
+    margin-top: 20px;
+}
+
+.review_form_back {
+    margin-top: 20px;
+}

@@ -1,0 +1,15 @@
+.vehicleForm__title {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.vehicle_form_buttons {
+    display: block;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.vehicle_form_back {
+    margin-top: 20px;
+}

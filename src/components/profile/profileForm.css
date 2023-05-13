@@ -1,0 +1,15 @@
+.profile_edit_form_title {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}
+
+.profile_edit_buttons {
+    display: block;
+    margin-bottom: 20px;
+    width: 200px;
+}
+
+.profile_edit_back {
+    margin-top: 20px;
+}

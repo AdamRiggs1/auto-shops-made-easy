@@ -32,3 +32,36 @@
     margin-top: 50px;
     width: 400px;
 }
+
+.owner_stores {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 500px;
+}
+
+.owner_stores_delete_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.favorite_store {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px solid;
+    width: 500px;
+}
+
+.favorite_store_delete_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}

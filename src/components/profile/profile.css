@@ -1,6 +1,7 @@
 .profile__header {
     display: flex;
     justify-content: center;
+    text-decoration-line: underline;
 }
 
 .profile__name {

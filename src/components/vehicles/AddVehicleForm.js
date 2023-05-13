@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
+import "./vehicleForm.css"
 
 export const AddVehicleForm = () => {
     /*
@@ -72,8 +73,34 @@ export const AddVehicleForm = () => {
     }
 
     return (
-        <form className="ticketForm">
-            <h2 className="ticketForm__title">Add a New Vehicle</h2>
+        <form className="vehicleForm">
+            <h2 className="vehicleForm__title">Add a New Vehicle</h2>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="vehicle_type">Vehicle Type:</label>
+                    <select
+                        className="vehicle_type"
+                        onChange={
+                            (evt) => {
+                                const copy = { ...vehicle }
+                                copy.vehicleTypeId = parseInt(evt.target.value)
+                                update(copy)
+                            }
+                        }>
+                        <option value={0}>Choose Vehicle Type</option>
+                        {
+                            vehicleTypes.map(
+                                vehicleType => {
+                                   return <option key={vehicleType.id}value={vehicleType.id}>{vehicleType.vehicleType}</option>
+                                }
+
+                            )
+                        }
+
+                    </select>
+                </div>
+            </fieldset>
+            
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="make">Make:</label>
@@ -130,38 +157,17 @@ export const AddVehicleForm = () => {
             </div>
             </fieldset>
 
-            <fieldset>
-                <div className="form-group">
-                    <label htmlFor="vehicle_type">Vehicle Type:</label>
-                    <select
-                        className="vehicle_type"
-                        onChange={
-                            (evt) => {
-                                const copy = { ...vehicle }
-                                copy.vehicleTypeId = parseInt(evt.target.value)
-                                update(copy)
-                            }
-                        }>
-                        <option value={0}>Choose Vehicle Type</option>
-                        {
-                            vehicleTypes.map(
-                                vehicleType => {
-                                   return <option key={vehicleType.id}value={vehicleType.id}>{vehicleType.vehicleType}</option>
-                                }
 
-                            )
-                        }
 
-                    </select>
-                </div>
-            </fieldset>
-
+            <section className="vehicle_form_buttons">
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                className="btn btn-primary">
+                className="vehicle_form_submit">
                 Add Vehicle
             </button>
-            <button onClick={() => navigate("/profile")}>Back to Profile</button>
+            <button className="vehicle_form_back" onClick={() => navigate("/profile")}>Back to Profile</button>
+            </section>
         </form>
+
     )
 }
