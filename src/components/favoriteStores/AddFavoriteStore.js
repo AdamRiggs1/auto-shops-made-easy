@@ -49,6 +49,7 @@ export const AddFavoriteStore = ({store}) => {
             .then(
                 setFavoriteStore()
             )
+            .then(window.alert("Added to Favorite Stores"))
     }
 return(
     <>

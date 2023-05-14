@@ -21,7 +21,6 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: orange;
 }
 
 .profile__button {

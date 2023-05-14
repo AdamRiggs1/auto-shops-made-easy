@@ -28,7 +28,7 @@ export const UserProfile = () => {
 
     return <article>
         <section>
-        <h2 className="profile__header">User Profile</h2>
+        <h2 className="profile__header">Profile</h2>
         <div className="profile__name">{profile.name}</div><br></br>
         <img className="profile__pic" src={profile.img} />
     </section>

@@ -39,7 +39,7 @@
     margin-top: 50px;
     width: 500px;
     border: 2px solid;
-    background-color: red
+    background-color: rgb(235, 157, 157);
 }
 
 .leave_review_button {
@@ -76,5 +76,5 @@
     border: 1px solid;
     margin-top: 20px;
     width: 200px;
-    background-color: red;
+    background-color: rgb(235, 157, 157);
 }

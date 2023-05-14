@@ -26,16 +26,16 @@ fieldset {
 
 .form-control {
     display: block;
-    width: 94%;
+    width: 400px;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: white;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid  black;
     border-radius: .25rem;
     -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -50,7 +50,7 @@ fieldset {
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    background-color:  rgba(243, 234, 234, 0.344);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 }

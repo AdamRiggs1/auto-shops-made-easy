@@ -71,6 +71,12 @@ export const Register = (props) => {
                         placeholder="Email address" required />
                 </fieldset>
                 <fieldset>
+                    <label htmlFor="password"> Password </label>
+                    <input onChange={updateUser}
+                        type="password" id="password" className="form-control"
+                        placeholder="Enter password" required />
+                </fieldset>
+                <fieldset>
                     <label htmlFor="img"> Profile Picture </label>
                     <input onChange={updateUser}
                         type="text" id="img" className="form-control"

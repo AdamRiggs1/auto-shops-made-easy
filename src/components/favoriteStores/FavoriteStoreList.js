@@ -56,7 +56,7 @@ export const FavoriteStoreList = () => {
         
     }
     <section>
-    <button onClick={() => navigate("/profile")}>Back to Profile</button>
+    <button className="favorite_store_button_back" onClick={() => navigate("/profile")}>Back to Profile</button>
     </section>
     </article>
 
