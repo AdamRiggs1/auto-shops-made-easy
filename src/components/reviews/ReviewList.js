@@ -67,7 +67,7 @@ export const ReviewList = ({ store }) => {
                     {
                         autoUserObject.id === review.userId
                             ? <section className="review__buttons">
-                                <button onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button>
+                                <button className="review_edit_button" onClick={() => navigate(`/reviews/${storeId}/${review.id}`)}>Edit Review</button><br></br>
                                 <button onClick={() => {
                                     fetch(`http://localhost:8088/reviews/${review.id}`, {
                                         method: "DELETE"
@@ -82,7 +82,7 @@ export const ReviewList = ({ store }) => {
                         stores.map(store =>
 
                             autoUserObject.id === store.userId
-                                ? <section className="review__buttons"><button onClick={() => { navigate(`/StoreResponse/${review.id}/${storeId}`) }}>Respond</button></section>
+                                ? <button className="review_button_respond" onClick={() => { navigate(`/StoreResponse/${review.id}/${storeId}`) }}>Respond</button>
                                 : <></>
                         )
 

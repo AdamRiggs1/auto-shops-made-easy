@@ -10,7 +10,7 @@ export const StoreSearch = ({ setterFunction }) => {
                   setterFunction(changeEvent.target.value)  
                 }
             }
-            type="text" placeholder="Enter search terms"/>
+            type="text" placeholder="Enter store name"/>
         </div>
     )
 }

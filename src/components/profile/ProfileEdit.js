@@ -97,6 +97,25 @@ export const ProfileEdit = () => {
 
             <fieldset>
                 <div className="form-group">
+                    <label htmlFor="password">Password:</label>
+                    <input
+                        required autoFocus
+                        type="password"
+                        className="form-control"
+                        placeholder="enter password"
+                        value={profile.password}
+                        onChange={
+                            (evt) => {
+                                const copy = { ...profile }
+                                copy.email = evt.target.value
+                                newProfile(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div className="form-group">
                     <label htmlFor="profile__picture">Profile Picture:</label>
                     <input
                         required autoFocus

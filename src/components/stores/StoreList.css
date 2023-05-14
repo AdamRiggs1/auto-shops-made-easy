@@ -5,6 +5,7 @@
     margin-top: 50px;
     border: 2px solid;
     width: 500px;
+    background-color: rgba(255, 255, 255, 0.436);
   }
 
 .store_info_link {
@@ -40,6 +41,7 @@
     margin-top: 50px;
     border: 2px solid;
     width: 500px;
+    background-color:rgba(255, 255, 255, 0.436);
 }
 
 .owner_stores_delete_button {
@@ -56,6 +58,7 @@
     margin-top: 50px;
     border: 2px solid;
     width: 500px;
+    background-color: rgba(255, 255, 255, 0.436);
 }
 
 .favorite_store_delete_button {
@@ -63,5 +66,13 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.favorite_store_button_back {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
